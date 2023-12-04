@@ -130,6 +130,9 @@ function buildConfig(parserName, target, entry, plugins) {
         resolve: { extensions: ['.js', '.pegjs'] },
         plugins: getPlugins(parserName, target, plugins),
         output: getOutput(target),
+        optimization: {
+          minimize: false
+        }
     }
 }
 
